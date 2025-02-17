@@ -11,6 +11,8 @@ JOBS = [
     {"id": 5, "job_title": "Cloud Engineer", "location": "Chennai, Tamil Nadu", "salary": "₹11,00,000 per annum"}
 ]
 
+print(app.template_folder)
+
 
 @app.route('/')
 def hello_world():
@@ -23,5 +25,5 @@ def list_jobs():
 
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
