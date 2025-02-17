@@ -1,0 +1,12 @@
+<div class="job_openings_card border-bottom py-2 row">
+  <div class="col-9">
+    <p class="text-secondary fs-5 fw-normal">{{job["job_title"]}}</p>
+    <p><b>Location</b> : {{job["location"]}}</p>
+    {% if "salary" in job %}
+    <p><b>Salary</b> : {{job["salary"]}}</p>
+    {% endif %}
+  </div>
+  <div class="col-3 text-center my-auto">
+    <button type="button" class="btn btn-outline-primary">Apply</button>
+  </div>
+</div>
