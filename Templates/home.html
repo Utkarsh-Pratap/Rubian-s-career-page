@@ -17,42 +17,40 @@
   </head>
   <body>
     <div class="container">
+      <h1 class="text-center mt-2 mb-4">{{company_name}} Career Page</h1>
 
-      <h1 class= "text-center mt-2 mb-4" >{{company_name}} Career Page</h1>
-
-      <img class = "img-fluid w-100 object-fit border rounded mt-2 mb-4" 
+      <img
+        class="img-fluid w-100 object-fit border rounded mt-2 mb-4"
         id="banner_img"
-        src="http://127.0.0.1:5000/static/images/banner.jpg"
+        src="{{ url_for('static', filename='images/banner.jpg') }}"
       />
-      
-        <h2 class= "text-center mt-2 mb-4">About Rubian's</h2>
 
-        <p class = "lead custom-text">
-          At Rubian's Career Page, we connect talented individuals with the right
-          career opportunities. Whether you’re a beginner or an experienced
-          professional, our platform helps you discover jobs that match your
-          skills and aspirations.
-          <br/>
-          We provide access to diverse job listings across industries, from
-          software development to business management. Beyond job postings, we
-          offer career resources, resume tips, and interview guides to help you
-          stand out. Whether you’re seeking remote work, freelance projects, or
-          full-time roles, we make the job search easier and more effective.
-          <br/>
-          For employers, our platform simplifies hiring by connecting them with
-          top talent. We ensure a seamless process for businesses to find the
-          right candidates.
-          <br/>
-          Join Rubian's Career Page today and take the next step in your career
-          journey. Explore opportunities, gain insights, and build a future that
-          aligns with your goals! 🚀
-        </p>
-      <div class=" mt-2 mb-4">
-        <h2 class= "text-center border-bottom pb-2">Open Position</h2>
+      <h2 class="text-center mt-2 mb-4">About Rubian's</h2>
+
+      <p class="lead custom-text">
+        At Rubian's Career Page, we connect talented individuals with the right
+        career opportunities. Whether you’re a beginner or an experienced
+        professional, our platform helps you discover jobs that match your
+        skills and aspirations.
+        <br />
+        We provide access to diverse job listings across industries, from
+        software development to business management. Beyond job postings, we
+        offer career resources, resume tips, and interview guides to help you
+        stand out. Whether you’re seeking remote work, freelance projects, or
+        full-time roles, we make the job search easier and more effective.
+        <br />
+        For employers, our platform simplifies hiring by connecting them with
+        top talent. We ensure a seamless process for businesses to find the
+        right candidates.
+        <br />
+        Join Rubian's Career Page today and take the next step in your career
+        journey. Explore opportunities, gain insights, and build a future that
+        aligns with your goals! 🚀
+      </p>
+      <div class="mt-2 mb-4">
+        <h2 class="text-center border-bottom pb-2">Open Position</h2>
         <div>
-          {% for job in jobs%}
-            {%include "job_items.html" %}
-          {% endfor %}
+          {% for job in jobs%} {%include "job_items.html" %} {% endfor %}
         </div>
       </div>
 
