@@ -1,6 +1,7 @@
 from flask import Flask, render_template,jsonify
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 
 JOBS = [
